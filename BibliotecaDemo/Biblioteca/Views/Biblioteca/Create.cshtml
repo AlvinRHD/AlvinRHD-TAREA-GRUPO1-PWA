@@ -1,5 +1,42 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model BibliotecaModel
+
 @{
+    ViewData["Title"] = "Nuevo Libro";
 }
+
+<h1>Nuevo Libro</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <form asp-action="Create">
+                @Html.AntiForgeryToken()
+                <div class="mb-3">
+                    <label asp-for="Titulo" class="form-label"></label>
+                    <input asp-for="Titulo" type="text" class="form-control">
+                    <span asp-validation-for="Titulo" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="PublishDate" class="form-label"></label>
+                    <input asp-for="PublishDate" type="text" class="form-control">
+                    <span asp-validation-for="PublishDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ISBN" class="form-label"></label>
+                    <input asp-for="ISBN" type="text" class="form-control">
+                    <span asp-validation-for="ISBN" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Genero" class="form-label"></label>
+                    <input asp-for="Genero" type="text" class="form-control">
+                    <span asp-validation-for="Genero" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>

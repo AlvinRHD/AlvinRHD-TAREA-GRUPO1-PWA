@@ -23,7 +23,7 @@
         public class Books
         {
             public int LibroId { get; set; }
-            public string Nombre { get; set; }
+            public string Titulo { get; set; }
             public int PublishDate { get; set; }
             public int ISBN { get; set; }
             public string Genero { get; set; }
